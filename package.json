@@ -1,0 +1,31 @@
+{
+  "name": "simpleioslocationweb",
+  "version": "1.0.0",
+  "description": "Simple WebdriverIO test that checks that Sauce's RDC location is set correctly on a iOS Safari browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "wdio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enriquegh/SimpleIOSLocationWeb.git"
+  },
+  "author": "Enrique Gonzalez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enriquegh/SimpleIOSLocationWeb/issues"
+  },
+  "homepage": "https://github.com/enriquegh/SimpleIOSLocationWeb#readme",
+
+  "devDependencies": {
+    "@wdio/local-runner": "^5.10.7",
+    "@wdio/mocha-framework": "^5.10.1",
+    "@wdio/sauce-service": "^5.9.3",
+    "@wdio/spec-reporter": "^5.9.3",
+    "@wdio/sync": "^5.10.1",
+    "@wdio/cli": "^5.10.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "webdriverio": "^5.10.7"
+  }
+}
