@@ -18,9 +18,20 @@ describe("Location test", () => {
 
         alert = $("*//XCUIElementTypeAlert")
         
-        if (alert) {
-            alertBtn = $("~OK")
-            alertBtn.click()
+        if (alert.isExisting()) {
+            alertBtn = $("~Allow")
+
+            if (alertBtn.isExisting()) { // We have Allow location services first
+                alertBtn.click()
+            }
+
+            alertOkBtn = $("~OK")
+
+            if (alertOkBtn.isExisting()) {
+
+                alertOkBtn.click()
+            }
+
         }
 
         // pause for 10 seconds to allow video to show current location
