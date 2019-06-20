@@ -34,8 +34,8 @@ describe("Location test", () => {
 
         }
 
-        // pause for 10 seconds to allow video to show current location
-        browser.pause(10000)
+        // pause for 5 seconds to allow video to show current location
+        browser.pause(5000)
         browser.takeScreenshot()
         
         browser.setGeoLocation({
@@ -44,8 +44,8 @@ describe("Location test", () => {
             altitude
         })
         
-        // pause for 10 seconds to allow video to show new location
-        browser.pause(10000)
+        // pause for 5 seconds to allow video to show new location
+        browser.pause(5000)
         browser.takeScreenshot()
 
         //TODO: Find a way to verify location actually changed.
