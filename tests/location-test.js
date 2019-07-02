@@ -9,6 +9,14 @@ describe("Location test", () => {
         currentContext = browser.getContext()
 
         browser.getContexts()
+
+        // Check if the "You're missing out text is presnt and click it"
+        // This might interfere with us clicking the location button
+        missingOutBtn = $('.ml-promotion-no-thanks')
+
+        if (missingOutBtn.isExisting()) {
+            missingOutBtn.click()
+        }
         
         myLocationBtn = $('.ml-button-my-location-fab')
 
@@ -49,6 +57,7 @@ describe("Location test", () => {
         browser.takeScreenshot()
 
         //TODO: Find a way to verify location actually changed.
+        // "Google Maps could not determine your precise location."
 
 
     })
