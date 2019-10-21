@@ -10,7 +10,17 @@ describe("Location test", () => {
 
         browser.getContexts()
 
-        // Check if the "You're missing out text is presnt and click it"
+        // Check if Allow button is present.
+        // Might happen where this happens first than promotion
+        browser.switchContext("NATIVE_APP")
+        alertOkBtn = $("~OK")
+
+        if (alertOkBtn.isExisting()) {
+            alertOkBtn.click()
+        }
+        browser.switchContext("WEBVIEW_1")
+
+        // Check if the "You're missing out text is present and click it"
         // This might interfere with us clicking the location button
         missingOutBtn = $('.ml-promotion-no-thanks')
 
@@ -19,7 +29,6 @@ describe("Location test", () => {
         }
         
         myLocationBtn = $('.ml-button-my-location-fab')
-
         myLocationBtn.click()
 
         browser.switchContext("NATIVE_APP")
