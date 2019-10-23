@@ -6,15 +6,15 @@ describe("Location test", () => {
 
         browser.url("https://maps.google.com")
 
-        currentContext = browser.getContext()
+        const currentContext = browser.getContext();
 
         browser.getContexts()
 
         // Check if Allow button is present.
         // Might happen where this happens first than promotion
         browser.switchContext("NATIVE_APP")
-        alertOkBtn = $("~OK")
-
+        const alertOkBtn = $("~OK")
+        
         if (alertOkBtn.isExisting()) {
             alertOkBtn.click()
         }
@@ -22,27 +22,27 @@ describe("Location test", () => {
 
         // Check if the "You're missing out text is present and click it"
         // This might interfere with us clicking the location button
-        missingOutBtn = $('.ml-promotion-no-thanks')
+        const missingOutBtn = $('.ml-promotion-no-thanks')
 
         if (missingOutBtn.isExisting()) {
             missingOutBtn.click()
         }
         
-        myLocationBtn = $('.ml-button-my-location-fab')
+        const myLocationBtn = $('.ml-button-my-location-fab')
         myLocationBtn.click()
 
         browser.switchContext("NATIVE_APP")
 
-        alert = $("*//XCUIElementTypeAlert")
+        const alert = $("*//XCUIElementTypeAlert")
         
         if (alert.isExisting()) {
-            alertBtn = $("~Allow")
+            const alertBtn = $("~Allow")
 
             if (alertBtn.isExisting()) { // We have Allow location services first
                 alertBtn.click()
             }
 
-            alertOkBtn = $("~OK")
+            const alertOkBtn = $("~OK")
 
             if (alertOkBtn.isExisting()) {
 
