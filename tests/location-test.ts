@@ -13,7 +13,9 @@ describe("Location test", () => {
             missingOutBtn.click()
         }
 
-        browser.getContexts()
+        // Save contexts to see which webview context to get
+        const contexts = browser.getContexts();
+        const webViewContexts = contexts.filter(context => context.includes("WEBVIEW"))
 
         // Check if Allow button is present.
         // Might happen where this happens first than promotion
@@ -23,7 +25,7 @@ describe("Location test", () => {
         if (alertOkBtn.isExisting()) {
             alertOkBtn.click()
         }
-        browser.switchContext("WEBVIEW_1")
+        browser.switchContext(webViewContexts[0])
         
         const myLocationBtn = $('.ml-button-my-location-fab')
         myLocationBtn.click()
