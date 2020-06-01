@@ -14,7 +14,6 @@ lerna-debug.log*
 
 .vscode
 
-package-lock.json
 
 # End of https://www.gitignore.io/api/swift,xcode
 
