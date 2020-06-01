@@ -6,7 +6,12 @@ describe("Location test", () => {
 
         browser.url("https://maps.google.com")
 
-        const currentContext = browser.getContext();
+        // Check if the "You're missing out text is present and click it"
+        // This might interfere with us clicking the location button
+        const missingOutBtn = $('.ml-promotion-no-thanks')
+        if (missingOutBtn.waitForExist(10000)) {
+            missingOutBtn.click()
+        }
 
         browser.getContexts()
 
@@ -19,14 +24,6 @@ describe("Location test", () => {
             alertOkBtn.click()
         }
         browser.switchContext("WEBVIEW_1")
-
-        // Check if the "You're missing out text is present and click it"
-        // This might interfere with us clicking the location button
-        const missingOutBtn = $('.ml-promotion-no-thanks')
-
-        if (missingOutBtn.isExisting()) {
-            missingOutBtn.click()
-        }
         
         const myLocationBtn = $('.ml-button-my-location-fab')
         myLocationBtn.click()
