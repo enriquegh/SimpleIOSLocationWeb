@@ -9,7 +9,8 @@ describe("Location test", () => {
         // Check if the "You're missing out text is present and click it"
         // This might interfere with us clicking the location button
         const missingOutBtn = $('.ml-promotion-no-thanks')
-        if (missingOutBtn.waitForExist(10000)) {
+        missingOutBtn.waitForExist()
+        if (missingOutBtn.waitForExist({timeout: 10000})) {
             missingOutBtn.click()
         }
 
