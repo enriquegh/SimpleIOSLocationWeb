@@ -27,7 +27,7 @@ describe("Location test", () => {
         }
         browser.switchContext(webViewContexts[0])
         
-        const myLocationBtn = $('.ml-button-my-location-fab')
+        const myLocationBtn = $('.mapsLiteJsControlsMlfab__ml-button-my-location-fab')
         myLocationBtn.click()
 
         browser.switchContext("NATIVE_APP")
