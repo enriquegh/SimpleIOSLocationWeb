@@ -6,7 +6,7 @@
             "*": [ "./*" ],
             "src/*": ["./src/*"]
         },
-        "types": ["@wdio/sync", "@types/mocha"]
+        "types": ["webdriverio/sync", "@types/mocha"]
     },
     "include": [
         "./tests/**/*.ts"
