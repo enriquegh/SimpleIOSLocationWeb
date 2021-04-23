@@ -1,3 +1,4 @@
+const datetime = new Date();
 exports.config = {
     //
     // ====================
@@ -64,15 +65,31 @@ exports.config = {
     capabilities: [
         {
             platformName: "iOS",
-            platformVersion: "13"
+            platformVersion: "14",
+            "sauce:options": {
+                build: `iOS Location Web - ${datetime}`
+            }
         },
         {
             platformName: "iOS",
-            platformVersion: "12"
+            platformVersion: "13",
+            "sauce:options": {
+                build: `iOS Location Web - ${datetime}`
+            }
         },
         {
             platformName: "iOS",
-            platformVersion: "11"
+            platformVersion: "12",
+            "sauce:options": {
+                build: `iOS Location Web - ${datetime}`
+            }
+        },
+        {
+            platformName: "iOS",
+            platformVersion: "11",
+            "sauce:options": {
+                build: `iOS Location Web - ${datetime}`
+            }
         }
 
 
