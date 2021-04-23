@@ -65,28 +65,28 @@ exports.config = {
     capabilities: [
         {
             platformName: "iOS",
-            platformVersion: "14",
+            "appium:platformVersion": "14",
             "sauce:options": {
                 build: `iOS Location Web - ${datetime}`
             }
         },
         {
             platformName: "iOS",
-            platformVersion: "13",
+            "appium:platformVersion": "13",
             "sauce:options": {
                 build: `iOS Location Web - ${datetime}`
             }
         },
         {
             platformName: "iOS",
-            platformVersion: "12",
+            "appium:platformVersion": "12",
             "sauce:options": {
                 build: `iOS Location Web - ${datetime}`
             }
         },
         {
             platformName: "iOS",
-            platformVersion: "11",
+            "appium:platformVersion": "11",
             "sauce:options": {
                 build: `iOS Location Web - ${datetime}`
             }
