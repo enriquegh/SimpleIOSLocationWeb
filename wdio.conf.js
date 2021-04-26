@@ -66,22 +66,26 @@ exports.config = {
         {
             platformName: "iOS",
             platformVersion: "14",
-            build: `iOS Location Web - ${datetime}`
+            build: `iOS Location Web - ${datetime}`,
+            name: `iOS Location Web - 14`
         },
         {
             platformName: "iOS",
             platformVersion: "13",
-            build: `iOS Location Web - ${datetime}`
+            build: `iOS Location Web - ${datetime}`,
+            name: `iOS Location Web - 13`
         },
         {
             platformName: "iOS",
             platformVersion: "12",
-            build: `iOS Location Web - ${datetime}`
+            build: `iOS Location Web - ${datetime}`,
+            name: `iOS Location Web - 12`
         },
         {
             platformName: "iOS",
             platformVersion: "11",
-            build: `iOS Location Web - ${datetime}`
+            build: `iOS Location Web - ${datetime}`,
+            name: `iOS Location Web - 11`
         }
 
 
